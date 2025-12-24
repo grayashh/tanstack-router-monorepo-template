@@ -1,0 +1,43 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.3.10/schema.json",
+	"root": false,
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true
+	},
+
+	"files": {
+		"ignoreUnknown": false,
+		"includes": ["**", "!dist", "!build"]
+	},
+
+	"linter": {
+		"enabled": true,
+		"domains": {
+			"react": "recommended"
+		},
+		"rules": {
+			"a11y": {
+				"noRedundantAlt": "off",
+				"useSemanticElements": "off",
+				"useKeyWithClickEvents": "off",
+				"noLabelWithoutControl": "off",
+				"useFocusableInteractive": "off",
+				"useAriaPropsForRole": "off",
+				"noRedundantRoles": "off"
+			},
+			"suspicious": {
+				"noDoubleEquals": "off",
+				"noArrayIndexKey": "off",
+				"noDocumentCookie": "off"
+			},
+			"correctness": {
+				"useExhaustiveDependencies": "off"
+			},
+			"security": {
+				"noDangerouslySetInnerHtml": "off"
+			}
+		}
+	}
+}
